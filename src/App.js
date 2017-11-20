@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import './stylesheets/styles.css';
 
+import AppWraper from './AppWraper'
+import Header from './Header'
+
 class App extends Component {
+
   render() {
     return (
-      <div className="App">
-
-      </div>
+      <AppWraper id="wraper">
+        <Header/>
+      </AppWraper>
     );
   }
 }

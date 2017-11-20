@@ -4,12 +4,10 @@ class Background extends PureComponent {
 
   render () {
     return (
-      <div id="bg">
-        <div class="triangle"></div>
-        {this.props.children}
-        
-        <div class="strip top"></div>
-        <div class="strip bottom"></div>
+      <div {...this.props}>
+        <div className="triangle"></div>
+        <div className="strip top"></div>
+        <div className="strip bottom"></div>
       </div>
     )
   }
