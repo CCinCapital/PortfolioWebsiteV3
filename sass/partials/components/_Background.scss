@@ -11,12 +11,13 @@ $triangleBackgroundColor: $stripColor;
   width: 100%;
   height: $stripHeight;
   background-color: $stripColor;
+  z-index: -1;
 
-  & .top {
+  &.top {
     top: 0;
   }
 
-  & .bottom {
+  &.bottom {
     bottom: 0;
   }
 }
