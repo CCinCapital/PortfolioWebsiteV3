@@ -1,0 +1,35 @@
+/* 
+Input:
+  - $dimension: Side length of square.
+Output:
+  - Square with side length of $dimension.
+*/
+@mixin square($dimension) {
+  &:before {
+    width: $dimension;
+    height: $dimension;
+    margin-top: -$dimension;
+  }
+
+  &:after {
+    width: $dimension;
+    height: $dimension * 2;
+    margin-top: -$dimension;
+  }
+}
+
+/* 
+Input:
+  - $dimension: Leg length of (Isosceles right triangle)[http://mathworld.wolfram.com/IsoscelesRightTriangle.html].
+  - $rotate: rotation corresponding to (x,y,z), defalut: not rotate.
+  - $bg: background-color, default: slight grey color.
+Output:
+  - `Isosceles right triangle` with leg length of $dimension.
+*/
+@mixin triangle($dimension, $rotate: rotateZ(0), $bg: #eee) {
+  border-top: $dimension solid $bg;
+  border-right: $dimension solid transparent;
+  border-left: $dimension solid $bg;
+  border-bottom: $dimension solid transparent;
+  transform: $rotate;
+}
