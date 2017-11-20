@@ -1,0 +1,29 @@
+@import "partials/mixins";
+
+$stripColor: #81d8d0;
+$stripHeight: 10px;
+$triangleSize: 80px;
+$triangleBackgroundColor: $stripColor;
+
+.strip {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: $stripHeight;
+  background-color: $stripColor;
+
+  & .top {
+    top: 0;
+  }
+
+  & .bottom {
+    bottom: 0;
+  }
+}
+
+.triangle {
+  @include triangle($triangleSize, 0, $triangleBackgroundColor);
+  position: fixed;
+  top: 0;
+  left: 0;
+}

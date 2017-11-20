@@ -1,0 +1,113 @@
+@import "partials/mixins";
+
+// Each Logo arm's `background-color`
+$logo-color-1: #333;
+$logo-color-2: #333;
+$logo-color-3: #a54141;
+$logo-color-4: #a54141;
+
+// Logo's configurations
+$logo-position: absolute;
+$logo-margin: 0 0 0 0;
+$logo-width: 70px;
+$animation-duratin: 0.3s;
+
+$logo-z-index: 10;
+
+// Don't change this, otherwise the animation will not be aligned to center.
+$logo-block-size: $logo-width/7;
+
+#logo {
+  position: $logo-position;
+  margin: $logo-margin;
+  width: $logo-width;
+  height: $logo-width;
+  background-color: transparent;
+  border: $logo-block-size*2 solid transparent;
+  border-radius: 50%;
+  transform: rotateZ(-45deg);
+  transition: transform $animation-duratin linear, background-color $animation-duratin linear;
+  cursor: pointer;
+  z-index: $logo-z-index;
+  
+  & .logo-part {
+    position: absolute;
+    width: $logo-block-size;
+    height: $logo-block-size;
+    margin-top: $logo-block-size*4;
+    transition: transform $animation-duratin linear;
+    
+    &:before {
+      content: "";
+      position: absolute;
+      width: $logo-block-size;
+      height: $logo-block-size*4;
+      background-color: inherit;
+      margin-top: -$logo-block-size*4;
+      transition: width $animation-duratin linear, height $animation-duratin linear, margin $animation-duratin linear 0.1s;
+    }
+    
+    &:after {
+      content: "";
+      position: absolute;
+      width: $logo-block-size*2;
+      height: $logo-block-size;
+      background-color: inherit;
+      margin-left: $logo-block-size;
+      transition: width $animation-duratin linear, height $animation-duratin linear, margin $animation-duratin linear 0.1s;
+    }
+  }
+  
+  & .one {
+    background-color: $logo-color-1;
+    z-index: $logo-z-index + 4;
+    transform: rotateY(0) translate(0, 1px);
+  }
+  
+  & .two {
+    background-color: $logo-color-2;
+    z-index: $logo-z-index + 2;
+    transform: rotateY(180deg) translate(-$logo-block-size*4, 1px);
+  }
+  
+  & .three {
+    background-color: $logo-color-3;
+    z-index: $logo-z-index + 3;
+    transform: rotateZ(90deg) translate(-$logo-block-size*2, -$logo-block-size*2);
+  }
+
+  & .four {
+    background-color: $logo-color-4;
+    z-index: $logo-z-index + 1;
+    transform: rotateZ(90deg) rotateY(180deg) translate(-$logo-block-size*2, -$logo-block-size*2 + 1);
+  }
+  
+  &:hover {
+    background-color: transparent;
+    transform: rotateZ(0deg);
+    
+    & .one {
+      background-color: $logo-color-1;
+      @include square($logo-block-size);
+      transform: translate($logo-block-size, -$logo-block-size*2);
+    }
+
+    & .two {
+      background-color: $logo-color-1;
+      @include square($logo-block-size);
+      transform: translate($logo-block-size*5, -$logo-block-size*2) rotateY(180deg);
+    }
+
+    & .three {
+      background-color: $logo-color-3;
+      @include square($logo-block-size);
+      transform: translate($logo-block-size, $logo-block-size);
+    }
+
+    & .four {
+      background-color: $logo-color-3;
+      @include square($logo-block-size);
+      transform: translate($logo-block-size*5, $logo-block-size) rotateY(180.1deg); // fix a crazy block, when cursor enter&leave div before animation ends.
+    }
+  }
+}
