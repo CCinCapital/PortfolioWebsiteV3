@@ -1,16 +1,15 @@
-@import "compass";
-@import "partials/variables";
-@import "partials/normalize";
-
+/* line 5, ../../sass/styles.scss */
 .App {
   text-align: center;
 }
 
+/* line 9, ../../sass/styles.scss */
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
 }
 
+/* line 14, ../../sass/styles.scss */
 .App-header {
   background-color: #222;
   height: 150px;
@@ -18,16 +17,21 @@
   color: white;
 }
 
+/* line 21, ../../sass/styles.scss */
 .App-title {
   font-size: 1.5em;
 }
 
+/* line 25, ../../sass/styles.scss */
 .App-intro {
   font-size: large;
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
-
