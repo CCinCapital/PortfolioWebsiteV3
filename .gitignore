@@ -2,3 +2,6 @@
 
 //Sass Cache file
 .sass-cache/
+
+//Node Modules
+node_modules/
