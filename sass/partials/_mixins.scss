@@ -31,5 +31,18 @@ Output:
   border-right: $dimension solid transparent;
   border-left: $dimension solid $bg;
   border-bottom: $dimension solid transparent;
-  transform: $rotate;
+  @include transform($rotate);
+}
+
+@mixin ParallelogramP($skewX: 0deg) {
+  display: flex;
+  @include transform(skewX($skewX));
+
+  & span {
+    @include transform(skewX(-$skewX));
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+  }
 }
