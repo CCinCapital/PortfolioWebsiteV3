@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import AnimatedLogo from './components/AnimatedLogo'
-import SlideNav from './components/SlideNav'
+import PrimaryNav from './components/PrimaryNav'
 
 class Header extends Component {
 
@@ -16,9 +16,10 @@ class Header extends Component {
 
   render () {
     return (
-      <div {...this.props}>
+      <div>
+        <div id="triangle"/>
         <AnimatedLogo id="logo" onClick={this.toggleNavBar}/>
-        <SlideNav id="slide-nav" className={this.state.navShow ? 'show' : ''}/>
+        <PrimaryNav/>
       </div>
     )
   }

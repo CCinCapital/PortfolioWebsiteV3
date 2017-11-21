@@ -1,17 +1,3 @@
-@import "partials/mixins";
-
-// Each Logo arm's `background-color`
-$logo-color-1: #333;
-$logo-color-2: #333;
-$logo-color-3: #a54141;
-$logo-color-4: #a54141;
-
-// Logo's configurations
-$logo-position: absolute;
-$logo-margin: 0 0 0 0;
-$logo-width: 70px;
-$animation-duratin: 0.3s;
-
 $logo-z-index: 10;
 
 // Don't change this, otherwise the animation will not be aligned to center.

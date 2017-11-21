@@ -1,15 +1,17 @@
 import React, { PureComponent } from 'react'
 
-import Background from './components/Background'
-
 class AppWraper extends PureComponent {
 
   render () {
     const {id, className} = this.props
     return (
       <div id={id} className={className}>
-        <Background id="bg"/>
+        <div className="stripe top"/>
+        <div className="triangle"/>
+
         {this.props.children}
+        
+        <div className="stripe bottom"/>
       </div>
     )
   }

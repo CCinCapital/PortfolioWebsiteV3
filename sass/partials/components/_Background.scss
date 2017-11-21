@@ -1,16 +1,19 @@
-@import "partials/mixins";
+#AppWraper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+  background-color: $body-background-color;
+}
 
-$stripColor: #81d8d0;
-$stripHeight: 10px;
-$triangleSize: 80px;
-$triangleBackgroundColor: $stripColor;
-
-.strip {
+.stripe {
   position: fixed;
   left: 0;
   width: 100%;
-  height: $stripHeight;
-  background-color: $stripColor;
+  height: $background-stripe-height;
+  background-color: $background-stripe-color;
   z-index: -1;
 
   &.top {
@@ -23,8 +26,9 @@ $triangleBackgroundColor: $stripColor;
 }
 
 .triangle {
-  @include triangle($triangleSize, 0, $triangleBackgroundColor);
+  @include triangle($background-triangle-size, 0, $background-triangle-color);
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 9;
 }

@@ -8,7 +8,7 @@ class App extends Component {
 
   render() {
     return (
-      <AppWraper id="wraper">
+      <AppWraper id="AppWraper">
         <Header/>
       </AppWraper>
     );
