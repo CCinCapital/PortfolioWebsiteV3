@@ -1,0 +1,40 @@
+/* 
+	Style Config
+*/
+// Body Background
+$body-background-color: $screen;
+
+// Nav logo
+$logo-color-1: #000000;
+$logo-color-2: #000000;
+$logo-color-3: #000000;
+$logo-color-4: #000000;
+$logo-position: absolute;
+$logo-margin: 8px 0 0 8px;
+$logo-width: 50px;
+$animation-duratin: 0.3s;
+
+// Primary Nav
+$primary-nav-margin: 0 0 0 125px;
+$primary-nav-width: 100%;
+$primary-nav-height: 40px;
+$primary-nav-padding: 0 0 20px 0;
+// Primary Nav Items
+$primary-nav-item-background-color: #ffff00; 
+$primary-nav-item-width: 150px;
+$primary-nav-item-padding: 10px 10px;
+$primary-nav-item-font-size: 1.5em;
+$primary-nav-item-font-color: #fff;
+$primary-nav-item-font-weight: bold;
+$primary-nav-item-background-color-1: #000;
+$primary-nav-item-background-color-2: $aqua;
+$primary-nav-item-background-color-3: $papaya;
+// last child
+$primary-nav-item-width-last-child: 50px;
+$primary-nav-item-background-color-last-child: #ffff00;
+
+// Background
+$background-stripe-height: 8px;
+$background-stripe-color: #ffff00;
+$background-triangle-size: 80px;
+$background-triangle-color: #ffff00;
