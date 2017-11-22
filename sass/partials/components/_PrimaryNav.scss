@@ -1,0 +1,112 @@
+.PrimaryNav {
+	position: absolute;
+	margin: $primary-nav-margin;
+	width: $primary-nav-width;
+	height: $primary-nav-height;
+	padding: $primary-nav-padding;
+	z-index: 8;
+	display: flex;
+}
+
+.PrimaryNavItem {
+	position: relative;
+	width: $primary-nav-item-width;
+	height: inherit;
+	color: $primary-nav-item-font-color;
+	font-weight: $primary-nav-item-font-weight;
+	font-size: $primary-nav-item-font-size;
+	background-color: $primary-nav-item-background-color;
+	padding: $primary-nav-item-padding;
+
+	& a {
+		position: relative;
+
+		&:before {
+			@include AnimatedUnderLine(0, $primary-nav-item-a-underline-height, $primary-nav-item-1-a-underline-color-2);
+			transition: width $primary-nav-item-a-underline-transition-duration ease-out $primary-nav-item-a-underline-transition-duration, margin-left $primary-nav-item-a-underline-transition-duration ease-out $primary-nav-item-a-underline-transition-duration;
+		}
+
+		&:after {
+			@include AnimatedUnderLine(0, $primary-nav-item-a-underline-height, $primary-nav-item-1-a-underline-color-1);
+			transition: width $primary-nav-item-a-underline-transition-duration ease-out, margin-left $primary-nav-item-a-underline-transition-duration ease-out;
+		}
+	}
+
+    &:hover {
+		cursor: pointer;
+
+    	& a {
+   	        &:before {
+	          margin-left: 0;
+	          width: 100%;  
+	          transition: width $primary-nav-item-a-underline-transition-duration ease-in;
+	        }
+
+	        &:after {
+	          margin-left: 0;
+	          width: 100%;
+	          transition: width $primary-nav-item-a-underline-transition-duration ease-in;
+			} 		
+    	}
+    }
+
+
+	&:last-child {
+		background-color: $primary-nav-item-background-color-last-child;
+		width: $primary-nav-item-width-last-child;
+		color: #000;
+		transition: width 0.1s linear;			
+
+		&:hover {
+			width: $primary-nav-item-width-last-child-hover-width;
+		}
+	}    
+
+	&.ParallelogramP {
+	  @include ParallelogramP(-45deg);
+	}
+
+	&#PrimaryNavItem-1 {
+		background-color: $primary-nav-item-background-color-1;
+
+		& a {
+			&:before {
+				background-color: $primary-nav-item-1-a-underline-color-2;
+			}
+
+			&:after {
+				background-color: $primary-nav-item-1-a-underline-color-1;
+			}
+		}
+	}
+
+	&#PrimaryNavItem-2 {
+		color: #000;
+		background-color: $primary-nav-item-background-color-2;
+
+		& a {
+			&:before {
+				background-color: $primary-nav-item-2-a-underline-color-2;
+			}
+
+			&:after {
+				background-color: $primary-nav-item-2-a-underline-color-1;
+			}
+		}		
+	}
+
+	&#PrimaryNavItem-3 {
+		color: #fff;
+		background-color: $primary-nav-item-background-color-3;
+
+		& a {
+			&:before {
+				background-color: $primary-nav-item-3-a-underline-color-2;
+			}
+
+			&:after {
+				background-color: $primary-nav-item-3-a-underline-color-1;
+			}
+		}		
+	}
+}

@@ -8,10 +8,13 @@ class PrimaryNav extends Component {
     return (
       <nav className="PrimaryNav">
         <ParallelogramP id="PrimaryNavItem-1" className="PrimaryNavItem" eventListeners={{}}>
-          Bio
+          <a>Bio</a>
         </ParallelogramP>
         <ParallelogramP id="PrimaryNavItem-2" className="PrimaryNavItem" eventListeners={{}}>
-          #About
+          <a>Yoooo</a>
+        </ParallelogramP>
+        <ParallelogramP id="PrimaryNavItem-3" className="PrimaryNavItem" eventListeners={{}}>
+          <a>#About</a>
         </ParallelogramP>
         <ParallelogramP id="PrimaryNavItem-menu" className="PrimaryNavItem" eventListeners={{}}>
           +

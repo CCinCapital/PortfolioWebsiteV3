@@ -46,3 +46,14 @@ Output:
     align-items: center;
   }
 }
+
+@mixin AnimatedUnderLine($width, $height, $color) {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  margin-left: 100%;
+  width: $width;
+  height: $height;
+  background-color: $color;
+}
