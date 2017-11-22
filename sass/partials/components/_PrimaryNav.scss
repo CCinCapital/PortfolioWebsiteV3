@@ -50,24 +50,13 @@
     	}
     }
 
-
-	&:last-child {
-		background-color: $primary-nav-item-background-color-last-child;
-		width: $primary-nav-item-width-last-child;
-		color: #000;
-		transition: width 0.1s linear;			
-
-		&:hover {
-			width: $primary-nav-item-width-last-child-hover-width;
-		}
-	}    
-
 	&.ParallelogramP {
 	  @include ParallelogramP(-45deg);
 	}
 
 	&#PrimaryNavItem-1 {
-		background-color: $primary-nav-item-background-color-1;
+		color: $primary-nav-item-1-a-font-color;
+		background-color: $primary-nav-item-1-background-color;
 
 		& a {
 			&:before {
@@ -81,8 +70,8 @@
 	}
 
 	&#PrimaryNavItem-2 {
-		color: #000;
-		background-color: $primary-nav-item-background-color-2;
+		color: $primary-nav-item-2-a-font-color;
+		background-color: $primary-nav-item-2-background-color;
 
 		& a {
 			&:before {
@@ -96,8 +85,8 @@
 	}
 
 	&#PrimaryNavItem-3 {
-		color: #fff;
-		background-color: $primary-nav-item-background-color-3;
+		color: $primary-nav-item-3-a-font-color;
+		background-color: $primary-nav-item-3-background-color;
 
 		& a {
 			&:before {
@@ -108,5 +97,55 @@
 				background-color: $primary-nav-item-3-a-underline-color-1;
 			}
 		}		
+	}
+
+	&#PrimaryNavItem-menu {
+		background-color: $primary-nav-item-menu-background-color;
+		width: $primary-nav-item-menu-width;
+		cursor: pointer;
+
+		& #PrimaryNavItem-menu-icon {
+			width: inherit;
+			color: #000;
+			padding: 0;
+
+			& svg {
+				transition: transform 0.1s linear;
+			}
+
+			&.bar-open {
+				& svg {
+					transform: rotateZ(45deg);
+				}
+			}
+		}
+
+		& #PrimaryNavItem-menu-social-bar {
+			position: absolute;
+			color: #000;
+			left: $primary-nav-item-menu-width;
+			top: -10px;
+			bottom: -10px;
+			width: 0;
+			padding-left: 0;
+			padding-right: 0;
+			overflow: hidden;
+			transition: width 0.2s linear, padding 0.2s linear;
+
+			& svg {
+				padding: 5px;
+
+				&:hover {
+					background-color: #00ffff;
+					border-radius: 5px;
+				}
+			}
+
+			&.bar-open {
+				width: 200px;
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+		}
 	}
 }
