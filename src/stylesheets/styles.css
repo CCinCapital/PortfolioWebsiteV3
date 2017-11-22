@@ -1,37 +1,337 @@
-/* line 5, ../../sass/styles.scss */
-.App {
-  text-align: center;
+/* 
+	Style Config
+*/
+/* 
+Input:
+  - $dimension: Side length of square.
+Output:
+  - Square with side length of $dimension.
+*/
+/* 
+Input:
+  - $dimension: Leg length of (Isosceles right triangle)[http://mathworld.wolfram.com/IsoscelesRightTriangle.html].
+  - $rotate: rotation corresponding to (x,y,z), defalut: not rotate.
+  - $bg: background-color, default: slight grey color.
+Output:
+  - `Isosceles right triangle` with leg length of $dimension.
+*/
+/* line 1, ../../sass/partials/components/_Background.scss */
+#AppWraper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+  background-color: #c5c1c0;
 }
 
-/* line 9, ../../sass/styles.scss */
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+/* line 11, ../../sass/partials/components/_Background.scss */
+.stripe {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: #ffff00;
+  z-index: -1;
+}
+/* line 19, ../../sass/partials/components/_Background.scss */
+.stripe.top {
+  top: 0;
+}
+/* line 23, ../../sass/partials/components/_Background.scss */
+.stripe.bottom {
+  bottom: 0;
 }
 
-/* line 14, ../../sass/styles.scss */
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+/* line 28, ../../sass/partials/components/_Background.scss */
+.triangle {
+  border-top: 80px solid #ffff00;
+  border-right: 80px solid transparent;
+  border-left: 80px solid #ffff00;
+  border-bottom: 80px solid transparent;
+  -moz-transform: 0;
+  -ms-transform: 0;
+  -webkit-transform: 0;
+  transform: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
 }
 
-/* line 21, ../../sass/styles.scss */
-.App-title {
+/* line 6, ../../sass/partials/components/_AnimatedLogo.scss */
+#logo {
+  position: absolute;
+  margin: 8px 0 0 8px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: 14.28571px solid transparent;
+  border-radius: 50%;
+  transform: rotateZ(-45deg);
+  transition: transform 0.3s linear, background-color 0.3s linear;
+  cursor: pointer;
+  z-index: 10;
+}
+/* line 19, ../../sass/partials/components/_AnimatedLogo.scss */
+#logo .logo-part {
+  position: absolute;
+  width: 7.14286px;
+  height: 7.14286px;
+  margin-top: 28.57143px;
+  transition: transform 0.3s linear;
+}
+/* line 26, ../../sass/partials/components/_AnimatedLogo.scss */
+#logo .logo-part:before {
+  content: "";
+  position: absolute;
+  width: 7.14286px;
+  height: 28.57143px;
+  background-color: inherit;
+  margin-top: -28.57143px;
+  transition: width 0.3s linear, height 0.3s linear, margin 0.3s linear 0.1s;
+}
+/* line 36, ../../sass/partials/components/_AnimatedLogo.scss */
+#logo .logo-part:after {
+  content: "";
+  position: absolute;
+  width: 14.28571px;
+  height: 7.14286px;
+  background-color: inherit;
+  margin-left: 7.14286px;
+  transition: width 0.3s linear, height 0.3s linear, margin 0.3s linear 0.1s;
+}
+/* line 47, ../../sass/partials/components/_AnimatedLogo.scss */
+#logo .one {
+  background-color: #000000;
+  z-index: 14;
+  transform: rotateY(0) translate(0, 1px);
+}
+/* line 53, ../../sass/partials/components/_AnimatedLogo.scss */
+#logo .two {
+  background-color: #000000;
+  z-index: 12;
+  transform: rotateY(180deg) translate(-28.57143px, 1px);
+}
+/* line 59, ../../sass/partials/components/_AnimatedLogo.scss */
+#logo .three {
+  background-color: #000000;
+  z-index: 13;
+  transform: rotateZ(90deg) translate(-14.28571px, -14.28571px);
+}
+/* line 65, ../../sass/partials/components/_AnimatedLogo.scss */
+#logo .four {
+  background-color: #000000;
+  z-index: 11;
+  transform: rotateZ(90deg) rotateY(180deg) translate(-14.28571px, -13.28571px);
+}
+/* line 71, ../../sass/partials/components/_AnimatedLogo.scss */
+#logo:hover {
+  background-color: transparent;
+  transform: rotateZ(0deg);
+}
+/* line 75, ../../sass/partials/components/_AnimatedLogo.scss */
+#logo:hover .one {
+  background-color: #000000;
+  transform: translate(7.14286px, -14.28571px);
+}
+/* line 8, ../../sass/partials/_mixins.scss */
+#logo:hover .one:before {
+  width: 7.14286px;
+  height: 7.14286px;
+  margin-top: -7.14286px;
+}
+/* line 14, ../../sass/partials/_mixins.scss */
+#logo:hover .one:after {
+  width: 7.14286px;
+  height: 14.28571px;
+  margin-top: -7.14286px;
+}
+/* line 81, ../../sass/partials/components/_AnimatedLogo.scss */
+#logo:hover .two {
+  background-color: #000000;
+  transform: translate(35.71429px, -14.28571px) rotateY(180deg);
+}
+/* line 8, ../../sass/partials/_mixins.scss */
+#logo:hover .two:before {
+  width: 7.14286px;
+  height: 7.14286px;
+  margin-top: -7.14286px;
+}
+/* line 14, ../../sass/partials/_mixins.scss */
+#logo:hover .two:after {
+  width: 7.14286px;
+  height: 14.28571px;
+  margin-top: -7.14286px;
+}
+/* line 87, ../../sass/partials/components/_AnimatedLogo.scss */
+#logo:hover .three {
+  background-color: #000000;
+  transform: translate(7.14286px, 7.14286px);
+}
+/* line 8, ../../sass/partials/_mixins.scss */
+#logo:hover .three:before {
+  width: 7.14286px;
+  height: 7.14286px;
+  margin-top: -7.14286px;
+}
+/* line 14, ../../sass/partials/_mixins.scss */
+#logo:hover .three:after {
+  width: 7.14286px;
+  height: 14.28571px;
+  margin-top: -7.14286px;
+}
+/* line 93, ../../sass/partials/components/_AnimatedLogo.scss */
+#logo:hover .four {
+  background-color: #000000;
+  transform: translate(35.71429px, 7.14286px) rotateY(180.1deg);
+}
+/* line 8, ../../sass/partials/_mixins.scss */
+#logo:hover .four:before {
+  width: 7.14286px;
+  height: 7.14286px;
+  margin-top: -7.14286px;
+}
+/* line 14, ../../sass/partials/_mixins.scss */
+#logo:hover .four:after {
+  width: 7.14286px;
+  height: 14.28571px;
+  margin-top: -7.14286px;
+}
+
+/* line 1, ../../sass/partials/components/_PrimaryNav.scss */
+.PrimaryNav {
+  position: absolute;
+  margin: 0 0 0 125px;
+  width: 100%;
+  height: 40px;
+  padding: 0 0 20px 0;
+  z-index: 8;
+  display: flex;
+}
+
+/* line 11, ../../sass/partials/components/_PrimaryNav.scss */
+.PrimaryNavItem {
+  position: relative;
+  width: 150px;
+  height: inherit;
+  color: #fff;
+  font-weight: bold;
   font-size: 1.5em;
+  background-color: #ffff00;
+  padding: 10px 10px;
 }
-
-/* line 25, ../../sass/styles.scss */
-.App-intro {
-  font-size: large;
+/* line 21, ../../sass/partials/components/_PrimaryNav.scss */
+.PrimaryNavItem a {
+  position: relative;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* line 24, ../../sass/partials/components/_PrimaryNav.scss */
+.PrimaryNavItem a:before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  margin-left: 100%;
+  width: 0;
+  height: 3px;
+  background-color: #00ffff;
+  transition: width 0.15s ease-out 0.15s, margin-left 0.15s ease-out 0.15s;
+}
+/* line 29, ../../sass/partials/components/_PrimaryNav.scss */
+.PrimaryNavItem a:after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  margin-left: 100%;
+  width: 0;
+  height: 3px;
+  background-color: #ffff00;
+  transition: width 0.15s ease-out, margin-left 0.15s ease-out;
+}
+/* line 35, ../../sass/partials/components/_PrimaryNav.scss */
+.PrimaryNavItem:hover {
+  cursor: pointer;
+}
+/* line 39, ../../sass/partials/components/_PrimaryNav.scss */
+.PrimaryNavItem:hover a:before {
+  margin-left: 0;
+  width: 100%;
+  transition: width 0.15s ease-in;
+}
+/* line 45, ../../sass/partials/components/_PrimaryNav.scss */
+.PrimaryNavItem:hover a:after {
+  margin-left: 0;
+  width: 100%;
+  transition: width 0.15s ease-in;
+}
+/* line 53, ../../sass/partials/components/_PrimaryNav.scss */
+.PrimaryNavItem.ParallelogramP {
+  display: flex;
+  -moz-transform: skewX(-45deg);
+  -ms-transform: skewX(-45deg);
+  -webkit-transform: skewX(-45deg);
+  transform: skewX(-45deg);
+}
+/* line 41, ../../sass/partials/_mixins.scss */
+.PrimaryNavItem.ParallelogramP span {
+  -moz-transform: skewX(45deg);
+  -ms-transform: skewX(45deg);
+  -webkit-transform: skewX(45deg);
+  transform: skewX(45deg);
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+}
+/* line 57, ../../sass/partials/components/_PrimaryNav.scss */
+.PrimaryNavItem#PrimaryNavItem-1 {
+  color: #fff;
+  background-color: #000;
+}
+/* line 62, ../../sass/partials/components/_PrimaryNav.scss */
+.PrimaryNavItem#PrimaryNavItem-1 a:before {
+  background-color: #00ffff;
+}
+/* line 66, ../../sass/partials/components/_PrimaryNav.scss */
+.PrimaryNavItem#PrimaryNavItem-1 a:after {
+  background-color: #ffff00;
+}
+/* line 72, ../../sass/partials/components/_PrimaryNav.scss */
+.PrimaryNavItem#PrimaryNavItem-2 {
+  color: #000;
+  background-color: #00ffff;
+}
+/* line 77, ../../sass/partials/components/_PrimaryNav.scss */
+.PrimaryNavItem#PrimaryNavItem-2 a:before {
+  background-color: #ff00ff;
+}
+/* line 81, ../../sass/partials/components/_PrimaryNav.scss */
+.PrimaryNavItem#PrimaryNavItem-2 a:after {
+  background-color: #000000;
+}
+/* line 87, ../../sass/partials/components/_PrimaryNav.scss */
+.PrimaryNavItem#PrimaryNavItem-3 {
+  color: #fff;
+  background-color: #ff00ff;
+}
+/* line 92, ../../sass/partials/components/_PrimaryNav.scss */
+.PrimaryNavItem#PrimaryNavItem-3 a:before {
+  background-color: #ffff00;
+}
+/* line 96, ../../sass/partials/components/_PrimaryNav.scss */
+.PrimaryNavItem#PrimaryNavItem-3 a:after {
+  background-color: #00ffff;
+}
+/* line 102, ../../sass/partials/components/_PrimaryNav.scss */
+.PrimaryNavItem#PrimaryNavItem-menu {
+  background-color: #ffff00;
+  width: 50px;
+  color: #000;
+  transition: width 0.1s linear;
+}
+/* line 108, ../../sass/partials/components/_PrimaryNav.scss */
+.PrimaryNavItem#PrimaryNavItem-menu:hover {
+  width: 200px;
 }

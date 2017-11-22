@@ -26,20 +26,29 @@ $primary-nav-item-padding: 10px 10px;
 $primary-nav-item-font-size: 1.5em;
 $primary-nav-item-font-color: #fff;
 $primary-nav-item-font-weight: bold;
-$primary-nav-item-background-color-1: #000;
-$primary-nav-item-background-color-2: #00ffff;
-$primary-nav-item-background-color-3: #ff00ff;
-// last child
-$primary-nav-item-width-last-child: 50px;
-$primary-nav-item-background-color-last-child: #ffff00;
-$primary-nav-item-width-last-child-hover-width: 200px;
+
 // hyper link <a>
+// item 1
+$primary-nav-item-1-background-color: #000;
+$primary-nav-item-1-a-font-color: #fff;
 $primary-nav-item-1-a-underline-color-1: #ffff00;
 $primary-nav-item-1-a-underline-color-2: #00ffff;
+// item 2
+$primary-nav-item-2-background-color: #00ffff;
+$primary-nav-item-2-a-font-color: #000;
 $primary-nav-item-2-a-underline-color-1: #000000;
 $primary-nav-item-2-a-underline-color-2: #ff00ff;
+// item 3
+$primary-nav-item-3-background-color: #ff00ff;
+$primary-nav-item-3-a-font-color: #fff;
 $primary-nav-item-3-a-underline-color-1: #00ffff;
 $primary-nav-item-3-a-underline-color-2: #ffff00;
+// item menu
+$primary-nav-item-menu-font-color: #000;
+$primary-nav-item-menu-width: 50px;
+$primary-nav-item-menu-hover-width: 200px;
+$primary-nav-item-menu-background-color: #ffff00;
+
 $primary-nav-item-a-underline-height: 3px;
 $primary-nav-item-a-underline-transition-duration: 0.15s;
 
