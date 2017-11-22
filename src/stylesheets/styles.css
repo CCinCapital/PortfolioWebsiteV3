@@ -214,7 +214,7 @@ Output:
 /* line 11, ../../sass/partials/components/_PrimaryNav.scss */
 .PrimaryNavItem {
   position: relative;
-  width: 150px;
+  width: 180px;
   height: inherit;
   color: #fff;
   font-weight: bold;
@@ -328,10 +328,47 @@ Output:
 .PrimaryNavItem#PrimaryNavItem-menu {
   background-color: #ffff00;
   width: 50px;
-  color: #000;
-  transition: width 0.1s linear;
+  cursor: pointer;
 }
-/* line 108, ../../sass/partials/components/_PrimaryNav.scss */
-.PrimaryNavItem#PrimaryNavItem-menu:hover {
+/* line 107, ../../sass/partials/components/_PrimaryNav.scss */
+.PrimaryNavItem#PrimaryNavItem-menu #PrimaryNavItem-menu-icon {
+  width: inherit;
+  color: #000;
+  padding: 0;
+}
+/* line 112, ../../sass/partials/components/_PrimaryNav.scss */
+.PrimaryNavItem#PrimaryNavItem-menu #PrimaryNavItem-menu-icon svg {
+  transition: transform 0.1s linear;
+}
+/* line 117, ../../sass/partials/components/_PrimaryNav.scss */
+.PrimaryNavItem#PrimaryNavItem-menu #PrimaryNavItem-menu-icon.bar-open svg {
+  transform: rotateZ(45deg);
+}
+/* line 123, ../../sass/partials/components/_PrimaryNav.scss */
+.PrimaryNavItem#PrimaryNavItem-menu #PrimaryNavItem-menu-social-bar {
+  position: absolute;
+  color: #000;
+  left: 50px;
+  top: -10px;
+  bottom: -10px;
+  width: 0;
+  padding-left: 0;
+  padding-right: 0;
+  overflow: hidden;
+  transition: width 0.2s linear, padding 0.2s linear;
+}
+/* line 135, ../../sass/partials/components/_PrimaryNav.scss */
+.PrimaryNavItem#PrimaryNavItem-menu #PrimaryNavItem-menu-social-bar svg {
+  padding: 5px;
+}
+/* line 138, ../../sass/partials/components/_PrimaryNav.scss */
+.PrimaryNavItem#PrimaryNavItem-menu #PrimaryNavItem-menu-social-bar svg:hover {
+  background-color: #00ffff;
+  border-radius: 5px;
+}
+/* line 144, ../../sass/partials/components/_PrimaryNav.scss */
+.PrimaryNavItem#PrimaryNavItem-menu #PrimaryNavItem-menu-social-bar.bar-open {
   width: 200px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
