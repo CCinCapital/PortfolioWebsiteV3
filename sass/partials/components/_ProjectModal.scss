@@ -12,7 +12,7 @@
 	justify-content: center;
 }
 
-.ProjectModal {
+.ProjectCard {
 	position: relative;
 	margin: 0;
 	width: 200px;
@@ -23,12 +23,12 @@
 	flex-direction: column;
 	align-items: center;
 
-	& .ProjectModal-Image {
+	& .ProjectCard-Image {
 		width: 100%;
 		transition: filter 0.2s linear;
 	}
 
-	& .ProjectModal-Discription {
+	& .ProjectCard-Discription {
 		width: 100%;
 		display: flex;
 		flex-direction: column;
@@ -39,44 +39,44 @@
 			margin: 0;
 		}
 
-		& .ProjectModal-ProjectName {
+		& .ProjectCard-ProjectName {
 			margin-top: 20px;
 			margin-bottom: 10px;
 			font-weight: bold;
 		}
 
-		& .ProjectModal-ProjectType {
+		& .ProjectCard-ProjectType {
 			margin-right: 5px;
 			font-style: italic;
 		}
 
-		& .ProjectModal-Spacer {
+		& .ProjectCard-Spacer {
 
 		}
 
-		& .ProjectModal-Year {
+		& .ProjectCard-Year {
 			margin-left: 5px;
 			font-style: italic;
 		}
 	}
 
 	&:hover {
-		& .ProjectModal-Image {
+		& .ProjectCard-Image {
 			filter: blur(3px);
 		}
 
-		& .ProjectModal-Overlay {
+		& .ProjectCard-Overlay {
 			height: 100%;
 		}
 	}		
 }
 
-.ProjectModal-upper {
+.ProjectCard-upper {
 	border-bottom: 5px solid #fff;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
 
-	& .ProjectModal-Overlay {
+	& .ProjectCard-Overlay {
 		position: absolute;
 		bottom: 0;
 		width: 100%;
@@ -90,12 +90,12 @@
 	}
 }
 
-.ProjectModal-lower {
+.ProjectCard-lower {
 	border-top: 5px solid #fff;
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
 
-	& .ProjectModal-Overlay {
+	& .ProjectCard-Overlay {
 		position: absolute;
 		top: 0;
 		width: 100%;

@@ -1,20 +1,20 @@
 import React, { Component } from 'react'
 
-import ProjectModal from './components/ProjectModal'
+import ProjectCard from './components/ProjectCard'
 
 class ProjectShelf extends Component {
 
   render () {
     return (
       <div className="ProjectShelf">
-        <ProjectModal className="ProjectModal ProjectModal-upper"/>
-        <ProjectModal className="ProjectModal ProjectModal-lower"/>
-        <ProjectModal className="ProjectModal ProjectModal-upper"/>
-        <ProjectModal className="ProjectModal ProjectModal-lower"/>
-        <ProjectModal className="ProjectModal ProjectModal-upper"/>
-        <ProjectModal className="ProjectModal ProjectModal-lower"/>
-        <ProjectModal className="ProjectModal ProjectModal-upper"/>
-        <ProjectModal className="ProjectModal ProjectModal-lower"/>
+        <ProjectCard className="ProjectCard ProjectCard-upper"/>
+        <ProjectCard className="ProjectCard ProjectCard-lower"/>
+        <ProjectCard className="ProjectCard ProjectCard-upper"/>
+        <ProjectCard className="ProjectCard ProjectCard-lower"/>
+        <ProjectCard className="ProjectCard ProjectCard-upper"/>
+        <ProjectCard className="ProjectCard ProjectCard-lower"/>
+        <ProjectCard className="ProjectCard ProjectCard-upper"/>
+        <ProjectCard className="ProjectCard ProjectCard-lower"/>
       </div>
     )
   }

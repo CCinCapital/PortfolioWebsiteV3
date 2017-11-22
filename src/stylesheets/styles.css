@@ -389,7 +389,7 @@ Output:
 }
 
 /* line 15, ../../sass/partials/components/_ProjectModal.scss */
-.ProjectModal {
+.ProjectCard {
   position: relative;
   margin: 0;
   width: 200px;
@@ -401,55 +401,55 @@ Output:
   align-items: center;
 }
 /* line 26, ../../sass/partials/components/_ProjectModal.scss */
-.ProjectModal .ProjectModal-Image {
+.ProjectCard .ProjectCard-Image {
   width: 100%;
   transition: filter 0.2s linear;
 }
 /* line 31, ../../sass/partials/components/_ProjectModal.scss */
-.ProjectModal .ProjectModal-Discription {
+.ProjectCard .ProjectCard-Discription {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 /* line 37, ../../sass/partials/components/_ProjectModal.scss */
-.ProjectModal .ProjectModal-Discription p {
+.ProjectCard .ProjectCard-Discription p {
   padding: 0;
   margin: 0;
 }
 /* line 42, ../../sass/partials/components/_ProjectModal.scss */
-.ProjectModal .ProjectModal-Discription .ProjectModal-ProjectName {
+.ProjectCard .ProjectCard-Discription .ProjectCard-ProjectName {
   margin-top: 20px;
   margin-bottom: 10px;
   font-weight: bold;
 }
 /* line 48, ../../sass/partials/components/_ProjectModal.scss */
-.ProjectModal .ProjectModal-Discription .ProjectModal-ProjectType {
+.ProjectCard .ProjectCard-Discription .ProjectCard-ProjectType {
   margin-right: 5px;
   font-style: italic;
 }
 /* line 57, ../../sass/partials/components/_ProjectModal.scss */
-.ProjectModal .ProjectModal-Discription .ProjectModal-Year {
+.ProjectCard .ProjectCard-Discription .ProjectCard-Year {
   margin-left: 5px;
   font-style: italic;
 }
 /* line 64, ../../sass/partials/components/_ProjectModal.scss */
-.ProjectModal:hover .ProjectModal-Image {
+.ProjectCard:hover .ProjectCard-Image {
   filter: blur(3px);
 }
 /* line 68, ../../sass/partials/components/_ProjectModal.scss */
-.ProjectModal:hover .ProjectModal-Overlay {
+.ProjectCard:hover .ProjectCard-Overlay {
   height: 100%;
 }
 
 /* line 74, ../../sass/partials/components/_ProjectModal.scss */
-.ProjectModal-upper {
+.ProjectCard-upper {
   border-bottom: 5px solid #fff;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 /* line 79, ../../sass/partials/components/_ProjectModal.scss */
-.ProjectModal-upper .ProjectModal-Overlay {
+.ProjectCard-upper .ProjectCard-Overlay {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -462,13 +462,13 @@ Output:
 }
 
 /* line 93, ../../sass/partials/components/_ProjectModal.scss */
-.ProjectModal-lower {
+.ProjectCard-lower {
   border-top: 5px solid #fff;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
 /* line 98, ../../sass/partials/components/_ProjectModal.scss */
-.ProjectModal-lower .ProjectModal-Overlay {
+.ProjectCard-lower .ProjectCard-Overlay {
   position: absolute;
   top: 0;
   width: 100%;
@@ -480,6 +480,6 @@ Output:
   background-color: #eee;
 }
 /* line 110, ../../sass/partials/components/_ProjectModal.scss */
-.ProjectModal-lower .ProjectModal-Overlay:hover {
+.ProjectCard-lower .ProjectCard-Overlay:hover {
   height: 100%;
 }
