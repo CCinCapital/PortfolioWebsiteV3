@@ -23,7 +23,7 @@ Output:
   width: 100%;
   height: 100%;
   z-index: -100;
-  background-color: #c5c1c0;
+  background-color: #535353;
 }
 
 /* line 11, ../../sass/partials/components/_Background.scss */
@@ -371,4 +371,115 @@ Output:
   width: 200px;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+/* line 1, ../../sass/partials/components/_ProjectModal.scss */
+.ProjectShelf {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 80px 100px 80px 100px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* line 15, ../../sass/partials/components/_ProjectModal.scss */
+.ProjectModal {
+  position: relative;
+  margin: 0;
+  width: 200px;
+  height: 300px;
+  padding: 10px;
+  background-color: #e24e42;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* line 26, ../../sass/partials/components/_ProjectModal.scss */
+.ProjectModal .ProjectModal-Image {
+  width: 100%;
+  transition: filter 0.2s linear;
+}
+/* line 31, ../../sass/partials/components/_ProjectModal.scss */
+.ProjectModal .ProjectModal-Discription {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* line 37, ../../sass/partials/components/_ProjectModal.scss */
+.ProjectModal .ProjectModal-Discription p {
+  padding: 0;
+  margin: 0;
+}
+/* line 42, ../../sass/partials/components/_ProjectModal.scss */
+.ProjectModal .ProjectModal-Discription .ProjectModal-ProjectName {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+/* line 48, ../../sass/partials/components/_ProjectModal.scss */
+.ProjectModal .ProjectModal-Discription .ProjectModal-ProjectType {
+  margin-right: 5px;
+  font-style: italic;
+}
+/* line 57, ../../sass/partials/components/_ProjectModal.scss */
+.ProjectModal .ProjectModal-Discription .ProjectModal-Year {
+  margin-left: 5px;
+  font-style: italic;
+}
+/* line 64, ../../sass/partials/components/_ProjectModal.scss */
+.ProjectModal:hover .ProjectModal-Image {
+  filter: blur(3px);
+}
+/* line 68, ../../sass/partials/components/_ProjectModal.scss */
+.ProjectModal:hover .ProjectModal-Overlay {
+  height: 100%;
+}
+
+/* line 74, ../../sass/partials/components/_ProjectModal.scss */
+.ProjectModal-upper {
+  border-bottom: 5px solid #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+/* line 79, ../../sass/partials/components/_ProjectModal.scss */
+.ProjectModal-upper .ProjectModal-Overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  opacity: 0.7;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transition: height 0.1s linear;
+  background-color: #eee;
+}
+
+/* line 93, ../../sass/partials/components/_ProjectModal.scss */
+.ProjectModal-lower {
+  border-top: 5px solid #fff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+/* line 98, ../../sass/partials/components/_ProjectModal.scss */
+.ProjectModal-lower .ProjectModal-Overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 0;
+  opacity: 0.7;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transition: height 0.1s linear;
+  background-color: #eee;
+}
+/* line 110, ../../sass/partials/components/_ProjectModal.scss */
+.ProjectModal-lower .ProjectModal-Overlay:hover {
+  height: 100%;
 }
