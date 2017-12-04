@@ -7,3 +7,22 @@
 @import "partials/components/Background";
 @import "partials/components/AnimatedLogo";
 @import "partials/components/PrimaryNav";
+@import "partials/components/ProjectShelf";
+
+::-webkit-scrollbar {
+  height: $background-stripe-height;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffff00;
+}
+
+// For Internet Explorer
+body {
+	scrollbar-face-color: #000;
+	scrollbar-track-color: #ffff00;
+}
