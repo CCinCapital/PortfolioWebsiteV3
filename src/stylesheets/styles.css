@@ -373,7 +373,7 @@ Output:
   padding-right: 10px;
 }
 
-/* line 1, ../../sass/partials/components/_ProjectModal.scss */
+/* line 1, ../../sass/partials/components/_ProjectShelf.scss */
 .ProjectShelf {
   position: absolute;
   top: 0;
@@ -386,100 +386,113 @@ Output:
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  overflow-x: scroll;
 }
 
-/* line 15, ../../sass/partials/components/_ProjectModal.scss */
+/* line 16, ../../sass/partials/components/_ProjectShelf.scss */
 .ProjectCard {
   position: relative;
-  margin: 0;
-  width: 200px;
-  height: 300px;
+  margin: 20px;
+  width: 320px;
+  height: 320px;
   padding: 10px;
   background-color: #e24e42;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 3px 3px #fedc3d, 5px 5px #4ec5c1, 7px 7px #a239ca;
 }
-/* line 26, ../../sass/partials/components/_ProjectModal.scss */
+/* line 32, ../../sass/partials/components/_ProjectShelf.scss */
 .ProjectCard .ProjectCard-Image {
-  width: 100%;
-  transition: filter 0.2s linear;
+  margin-top: 25px;
+  width: 200px;
+  height: 200px;
+  border: 5px solid #e7dfdd;
+  border-radius: 50%;
+  box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.9);
 }
-/* line 31, ../../sass/partials/components/_ProjectModal.scss */
+/* line 40, ../../sass/partials/components/_ProjectShelf.scss */
+.ProjectCard .ProjectCard-Image img {
+  position: relative;
+  width: 198px;
+  height: 198px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: inherit;
+  background-color: #e7dfdd;
+  box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.9);
+}
+/* line 51, ../../sass/partials/components/_ProjectShelf.scss */
 .ProjectCard .ProjectCard-Discription {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-/* line 37, ../../sass/partials/components/_ProjectModal.scss */
+/* line 57, ../../sass/partials/components/_ProjectShelf.scss */
 .ProjectCard .ProjectCard-Discription p {
   padding: 0;
   margin: 0;
 }
-/* line 42, ../../sass/partials/components/_ProjectModal.scss */
+/* line 62, ../../sass/partials/components/_ProjectShelf.scss */
 .ProjectCard .ProjectCard-Discription .ProjectCard-ProjectName {
   margin-top: 20px;
   margin-bottom: 10px;
   font-weight: bold;
 }
-/* line 48, ../../sass/partials/components/_ProjectModal.scss */
+/* line 68, ../../sass/partials/components/_ProjectShelf.scss */
 .ProjectCard .ProjectCard-Discription .ProjectCard-ProjectType {
   margin-right: 5px;
   font-style: italic;
 }
-/* line 57, ../../sass/partials/components/_ProjectModal.scss */
+/* line 77, ../../sass/partials/components/_ProjectShelf.scss */
 .ProjectCard .ProjectCard-Discription .ProjectCard-Year {
   margin-left: 5px;
   font-style: italic;
 }
-/* line 64, ../../sass/partials/components/_ProjectModal.scss */
+/* line 84, ../../sass/partials/components/_ProjectShelf.scss */
 .ProjectCard:hover .ProjectCard-Image {
   filter: blur(3px);
 }
-/* line 68, ../../sass/partials/components/_ProjectModal.scss */
-.ProjectCard:hover .ProjectCard-Overlay {
-  height: 100%;
+/* line 88, ../../sass/partials/components/_ProjectShelf.scss */
+.ProjectCard:hover .ProjectCard-Discription {
+  filter: blur(2px);
 }
-
-/* line 74, ../../sass/partials/components/_ProjectModal.scss */
-.ProjectCard-upper {
-  border-bottom: 5px solid #fff;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-/* line 79, ../../sass/partials/components/_ProjectModal.scss */
-.ProjectCard-upper .ProjectCard-Overlay {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 0;
-  opacity: 0.7;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  transition: height 0.1s linear;
-  background-color: #eee;
-}
-
-/* line 93, ../../sass/partials/components/_ProjectModal.scss */
-.ProjectCard-lower {
-  border-top: 5px solid #fff;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-/* line 98, ../../sass/partials/components/_ProjectModal.scss */
-.ProjectCard-lower .ProjectCard-Overlay {
+/* line 93, ../../sass/partials/components/_ProjectShelf.scss */
+.ProjectCard .ProjectCard-Overlay {
   position: absolute;
   top: 0;
+  left: 0;
   width: 100%;
-  height: 0;
-  opacity: 0.7;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  transition: height 0.1s linear;
-  background-color: #eee;
-}
-/* line 110, ../../sass/partials/components/_ProjectModal.scss */
-.ProjectCard-lower .ProjectCard-Overlay:hover {
   height: 100%;
+  border-radius: inherit;
+  opacity: 0;
+  background-color: #1db1bd;
+}
+/* line 103, ../../sass/partials/components/_ProjectShelf.scss */
+.ProjectCard .ProjectCard-Overlay:hover {
+  cursor: help;
+  opacity: 0.8;
+  box-shadow: 3px 3px #0123c2, 5px 5px #b13a3e, 7px 7px #5dc635;
+}
+
+/* line 12, ../../sass/styles.scss */
+::-webkit-scrollbar {
+  height: 8px;
+}
+
+/* line 16, ../../sass/styles.scss */
+::-webkit-scrollbar-thumb {
+  background: #000;
+}
+
+/* line 20, ../../sass/styles.scss */
+::-webkit-scrollbar-track {
+  background: #ffff00;
+}
+
+/* line 25, ../../sass/styles.scss */
+body {
+  scrollbar-face-color: #000;
+  scrollbar-track-color: #ffff00;
 }

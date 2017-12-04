@@ -1,21 +1,35 @@
 import React, { PureComponent } from 'react'
 
+const ProjectImg = ({projectImg}) => {
+  return <div className="ProjectCard-Image">
+    <img alt="" src={projectImg}></img>          
+  </div>
+} 
+
+const ProjectDiscription = ({projectName, projectType, projectYear}) => {
+  return <div className="ProjectCard-Discription">
+    <p className="ProjectCard-ProjectName">{projectName}</p>
+    <p>
+      <span className="ProjectCard-ProjectType">{projectType}</span>
+      <span className="ProjectCard-Spacer">|</span>
+      <span className="ProjectCard-Year">{projectYear}</span>
+    </p>
+  </div>
+}
+
+const ProjectOverlay = ({}) => {
+  return <div className="ProjectCard-Overlay"></div>
+}
+
 class ProjectCard extends PureComponent {
 
   render () {
-    const {className} = this.props
+    const {onClick, projectImg, projectName, projectType, projectYear} = this.props
     return (
-      <div className={className}>
-        <img className="ProjectCard-Image" src="http://canchen.rocks/img/BlindZer/BlindZer.png"></img>
-        <div className="ProjectCard-Discription">
-          <p className="ProjectCard-ProjectName">BlindZer</p>
-          <p>
-            <span className="ProjectCard-ProjectType">Personal Project</span>
-            <span className="ProjectCard-Spacer">|</span>
-            <span className="ProjectCard-Year">2016</span>
-          </p>
-        </div>
-        <div className="ProjectCard-Overlay"></div>
+      <div className="ProjectCard" onClick={onClick}>
+        <ProjectImg projectImg={projectImg}/>
+        <ProjectDiscription projectName={projectName} projectType={projectType} projectYear={projectYear}/>
+        <ProjectOverlay />
       </div>
     )
   }
