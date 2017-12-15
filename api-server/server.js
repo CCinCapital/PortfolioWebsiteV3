@@ -5,21 +5,81 @@ const cors = require('cors')
 const bodyParser = require('body-parser')
 
 const config = require('./config')
-const categories = require('./categories')
-// const project = require('./project')
-const posts = require('./posts')
-// const comments = require('./comments')
+const projects = require('./projects/router')
 
 const app = express()
 
-app.use(express.static('public'))
-app.use(cors())
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json())
 
 app.get('/', (req, res) => {
+  const msg = `
+  <pre>Access Forbidden.</pre>
+  `
+
+  res.send(msg)
+})
+
+app.get('/api', (req, res) => {
   const help = `
   <pre>
-    Test
-    This is only a test
+    <table style="width: 50%;">
+      <tr style="text-align: left;">
+        <th>Route</th>
+        <th>HTML Verb</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>/api/b</td>
+        <td>GET</td>
+        <td>Get All categories of blog.</td>
+      </tr>
+      <tr>
+        <td>/api/b/:category</td>
+        <td>GET</td>
+        <td>Get All Posts in :category.</td>
+      </tr>
+      <tr>
+        <td>/api/b/:category</td>
+        <td>POST</td>
+        <td>Create post in :category.</td>
+      </tr>
+      <tr>
+        <td>/api/b/:category/:post_id</td>
+        <td>GET</td>
+        <td>Get a post.</td>
+      </tr>
+      <tr>
+        <td>/api/b/:category/:post_id</td>
+        <td>PUT</td>
+        <td>Update a post with new content.</td>
+      </tr>
+      <tr>
+        <td>/api/b/:category/:post_id</td>
+        <td>DELETE</td>
+        <td>Delete a post.</td>
+      </tr>
+      <tr>
+        <td>/api/projects</td>
+        <td>GET</td>
+        <td>Get All projects.</td>
+      </tr>
+      <tr>
+        <td>/api/projects/:project_id</td>
+        <td>GET</td>
+        <td>Get a project.</td>
+      </tr>
+      <tr>
+        <td>/api/projects/:project_id</td>
+        <td>PUT</td>
+        <td>Update a project.</td>
+      </tr>
+      <tr>
+        <td>/api/projects/:project_id</td>
+        <td>DELETE</td>
+        <td>Delete a project.</td>
+      </tr>      
+    </table>
   </pre>
 
   `
@@ -27,45 +87,12 @@ app.get('/', (req, res) => {
   res.send(help)
 })
 
-app.use((req, res, next) => {
-  // const token = req.get('Authorization')
 
-  // if (token) {
-  //   req.token = token
-    next()
-  // } else {
-  //   res.status(403).send({
-  //     error: 'Please provide an Authorization header to identify yourself.'
-  //   })
-  // }
+app.use('/api/projects', projects)
+
+app.get('/*', function(req, res) {
+  res.status(404).send('404: Resource Not Found')
 })
-
-app.get('/categories', (req, res) => {
-  categories.getAll(req.token)
-    .then(
-      (data) => res.send(data),
-      (error) => {
-        console.error(error)
-        res.status(500).send({
-          error: 'There was an error.'
-        })
-      }
-    )
-})
-
-app.get('/posts', (req, res) => {
-  posts.getAll(req.token)
-    .then(
-      (data) => res.send(data),
-      (error) => {
-        console.error(error)
-        res.status(500).send({
-          error: 'There was an error.'
-        })
-      }
-    )
-})
-
 
 app.listen(config.port, () => {
   console.log(`Server listing on port ${config.port}, Ctrl+C to stop.`)

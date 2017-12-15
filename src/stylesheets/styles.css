@@ -23,7 +23,7 @@ Output:
   width: 100%;
   height: 100%;
   z-index: -100;
-  background-color: #535353;
+  background-color: #373636;
 }
 
 /* line 11, ../../sass/partials/components/_Background.scss */
@@ -340,11 +340,19 @@ Output:
 .PrimaryNavItem#PrimaryNavItem-menu #PrimaryNavItem-menu-icon svg {
   transition: transform 0.1s linear;
 }
-/* line 117, ../../sass/partials/components/_PrimaryNav.scss */
+/* line 115, ../../sass/partials/components/_PrimaryNav.scss */
+.PrimaryNavItem#PrimaryNavItem-menu #PrimaryNavItem-menu-icon svg:hover {
+  transform: scale(1.1);
+}
+/* line 121, ../../sass/partials/components/_PrimaryNav.scss */
 .PrimaryNavItem#PrimaryNavItem-menu #PrimaryNavItem-menu-icon.bar-open svg {
   transform: rotateZ(45deg);
 }
-/* line 123, ../../sass/partials/components/_PrimaryNav.scss */
+/* line 124, ../../sass/partials/components/_PrimaryNav.scss */
+.PrimaryNavItem#PrimaryNavItem-menu #PrimaryNavItem-menu-icon.bar-open svg:hover {
+  transform: rotateZ(45deg) scale(1.1);
+}
+/* line 131, ../../sass/partials/components/_PrimaryNav.scss */
 .PrimaryNavItem#PrimaryNavItem-menu #PrimaryNavItem-menu-social-bar {
   position: absolute;
   color: #000;
@@ -357,16 +365,16 @@ Output:
   overflow: hidden;
   transition: width 0.2s linear, padding 0.2s linear;
 }
-/* line 135, ../../sass/partials/components/_PrimaryNav.scss */
+/* line 143, ../../sass/partials/components/_PrimaryNav.scss */
 .PrimaryNavItem#PrimaryNavItem-menu #PrimaryNavItem-menu-social-bar svg {
   padding: 5px;
 }
-/* line 138, ../../sass/partials/components/_PrimaryNav.scss */
+/* line 146, ../../sass/partials/components/_PrimaryNav.scss */
 .PrimaryNavItem#PrimaryNavItem-menu #PrimaryNavItem-menu-social-bar svg:hover {
   background-color: #00ffff;
   border-radius: 5px;
 }
-/* line 144, ../../sass/partials/components/_PrimaryNav.scss */
+/* line 152, ../../sass/partials/components/_PrimaryNav.scss */
 .PrimaryNavItem#PrimaryNavItem-menu #PrimaryNavItem-menu-social-bar.bar-open {
   width: 200px;
   padding-left: 10px;
@@ -389,7 +397,7 @@ Output:
   overflow-x: scroll;
 }
 
-/* line 16, ../../sass/partials/components/_ProjectShelf.scss */
+/* line 2, ../../sass/partials/components/_ProjectCard.scss */
 .ProjectCard {
   position: relative;
   margin: 20px;
@@ -403,7 +411,7 @@ Output:
   align-items: center;
   box-shadow: 3px 3px #fedc3d, 5px 5px #4ec5c1, 7px 7px #a239ca;
 }
-/* line 32, ../../sass/partials/components/_ProjectShelf.scss */
+/* line 18, ../../sass/partials/components/_ProjectCard.scss */
 .ProjectCard .ProjectCard-Image {
   margin-top: 25px;
   width: 200px;
@@ -412,7 +420,7 @@ Output:
   border-radius: 50%;
   box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.9);
 }
-/* line 40, ../../sass/partials/components/_ProjectShelf.scss */
+/* line 26, ../../sass/partials/components/_ProjectCard.scss */
 .ProjectCard .ProjectCard-Image img {
   position: relative;
   width: 198px;
@@ -422,43 +430,43 @@ Output:
   background-color: #e7dfdd;
   box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.9);
 }
-/* line 51, ../../sass/partials/components/_ProjectShelf.scss */
+/* line 37, ../../sass/partials/components/_ProjectCard.scss */
 .ProjectCard .ProjectCard-Discription {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-/* line 57, ../../sass/partials/components/_ProjectShelf.scss */
+/* line 43, ../../sass/partials/components/_ProjectCard.scss */
 .ProjectCard .ProjectCard-Discription p {
   padding: 0;
   margin: 0;
 }
-/* line 62, ../../sass/partials/components/_ProjectShelf.scss */
+/* line 48, ../../sass/partials/components/_ProjectCard.scss */
 .ProjectCard .ProjectCard-Discription .ProjectCard-ProjectName {
   margin-top: 20px;
   margin-bottom: 10px;
   font-weight: bold;
 }
-/* line 68, ../../sass/partials/components/_ProjectShelf.scss */
+/* line 54, ../../sass/partials/components/_ProjectCard.scss */
 .ProjectCard .ProjectCard-Discription .ProjectCard-ProjectType {
   margin-right: 5px;
   font-style: italic;
 }
-/* line 77, ../../sass/partials/components/_ProjectShelf.scss */
+/* line 63, ../../sass/partials/components/_ProjectCard.scss */
 .ProjectCard .ProjectCard-Discription .ProjectCard-Year {
   margin-left: 5px;
   font-style: italic;
 }
-/* line 84, ../../sass/partials/components/_ProjectShelf.scss */
+/* line 70, ../../sass/partials/components/_ProjectCard.scss */
 .ProjectCard:hover .ProjectCard-Image {
   filter: blur(3px);
 }
-/* line 88, ../../sass/partials/components/_ProjectShelf.scss */
+/* line 74, ../../sass/partials/components/_ProjectCard.scss */
 .ProjectCard:hover .ProjectCard-Discription {
   filter: blur(2px);
 }
-/* line 93, ../../sass/partials/components/_ProjectShelf.scss */
+/* line 79, ../../sass/partials/components/_ProjectCard.scss */
 .ProjectCard .ProjectCard-Overlay {
   position: absolute;
   top: 0;
@@ -469,29 +477,29 @@ Output:
   opacity: 0;
   background-color: #1db1bd;
 }
-/* line 103, ../../sass/partials/components/_ProjectShelf.scss */
+/* line 89, ../../sass/partials/components/_ProjectCard.scss */
 .ProjectCard .ProjectCard-Overlay:hover {
   cursor: help;
   opacity: 0.8;
   box-shadow: 3px 3px #0123c2, 5px 5px #b13a3e, 7px 7px #5dc635;
 }
 
-/* line 12, ../../sass/styles.scss */
+/* line 13, ../../sass/styles.scss */
 ::-webkit-scrollbar {
   height: 8px;
 }
 
-/* line 16, ../../sass/styles.scss */
+/* line 17, ../../sass/styles.scss */
 ::-webkit-scrollbar-thumb {
   background: #000;
 }
 
-/* line 20, ../../sass/styles.scss */
+/* line 21, ../../sass/styles.scss */
 ::-webkit-scrollbar-track {
   background: #ffff00;
 }
 
-/* line 25, ../../sass/styles.scss */
+/* line 26, ../../sass/styles.scss */
 body {
   scrollbar-face-color: #000;
   scrollbar-track-color: #ffff00;

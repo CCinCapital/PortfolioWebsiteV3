@@ -1,0 +1,99 @@
+
+.ProjectCard {
+  position: relative;
+  margin: 20px;
+  width: 320px;
+  height: 320px;
+  padding: 10px;
+  background-color: $papaya;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow:
+    3px 3px $butter,
+    5px 5px $aqua,
+    7px 7px $fuschia;
+
+  & .ProjectCard-Image {
+    margin-top: 25px;
+    width: 200px;
+    height: 200px;
+    border: 5px solid $stark;
+    border-radius: 50%;
+    box-shadow: 0px 0px 3px rgba(255,255,255,0.9);
+
+    & img {
+      position: relative;
+      width: 198px;
+      height: 198px;
+      border: 1px solid rgba(255,255,255,0.5);
+      border-radius: inherit;
+      background-color: $stark;
+      box-shadow: 0px 0px 3px rgba(255,255,255,0.9);
+    }
+  }
+
+  & .ProjectCard-Discription {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & p {
+      padding: 0;
+      margin: 0;
+    }
+
+    & .ProjectCard-ProjectName {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    & .ProjectCard-ProjectType {
+      margin-right: 5px;
+      font-style: italic;
+    }
+
+    & .ProjectCard-Spacer {
+
+    }
+
+    & .ProjectCard-Year {
+      margin-left: 5px;
+      font-style: italic;
+    }
+  }
+
+  &:hover {
+    & .ProjectCard-Image {
+      filter: blur(3px);
+    }
+
+    & .ProjectCard-Discription {
+      filter: blur(2px);
+    }
+  }
+
+  & .ProjectCard-Overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    opacity: 0;
+    background-color: invert($papaya);
+
+    &:hover {
+      cursor: help;
+      opacity: 0.8;
+      box-shadow:
+        3px 3px invert($butter),
+        5px 5px invert($aqua),
+        7px 7px invert($fuschia);
+    }
+  }
+
+}

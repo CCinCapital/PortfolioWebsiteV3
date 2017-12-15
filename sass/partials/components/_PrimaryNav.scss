@@ -111,11 +111,19 @@
 
 			& svg {
 				transition: transform 0.1s linear;
+
+				&:hover {
+					transform: scale(1.1);
+				}
 			}
 
 			&.bar-open {
 				& svg {
 					transform: rotateZ(45deg);
+
+					&:hover {
+						transform: rotateZ(45deg) scale(1.1);
+					}
 				}
 			}
 		}
